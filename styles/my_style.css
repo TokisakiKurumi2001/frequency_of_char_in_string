@@ -1,0 +1,17 @@
+#heading1
+{
+	/* centralize the heading of the page */
+	text-align:center;
+	font-family:Arial;
+	color:blue;
+}
+
+#inst
+{
+	/* 
+	* give instruction to the user, since we have to press Enter
+	* in order for jQuery to listen to the `keydown` event
+	*/
+	text-decoration:small-caps;
+	color:red;
+}
