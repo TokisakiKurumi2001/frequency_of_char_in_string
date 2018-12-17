@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Frequency of char in string</title>
+
+		<!-- Materialize -->
+		<!-- import Google Icon Font -->
+		<link rel = "stylesheet" href = "https://fonts.googleapis.com/icon?family=Material+Icons">
+		<!-- import materialize css -->
+		<link type = "text/css" rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" media = "screen,projection">
+		<!-- Let the broswer know website is optimized for mobile -->
+		<meta name = "viewport" content = "width=device-width, initial-scale = 1.0"/>
+		<!--import jQuery -->
+		<script src = "http://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<!-- import materialize javascript -->
+		<script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+		<!-- Chart.js -->
+		<script src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+
+		<!-- VueJS -->
+		<script src = "https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"></script>
+
+		<!-- Vivid.js -->
+		<script src = "https://cdn.jsdelivr.net/npm/vivid-icons"></script>
+
+		<!-- My own style -->
+		<link rel = "stylesheet" href = "styles/my_style.css">
+	</head>
+	<body>
+		<!-- A heading of a page -->
+		<h1 id = "heading1">Frequency of char in string</h1>
+		<!-- Put `container` in this place to scale the page and make it responsive to many devices -->
+		<div class = "container">
+			<!-- Inform user that they should press Enter when they type in the input field
+				Add some COOL icon of vivid.js
+			-->
+			<p id = "inst">Whenever you are using a laptop <span><i data-vi="laptop" data-vi-size="30"></i></span> or a phone <span><i data-vi="mobile" data-vi-size="30"></i> .Press enter when you finish typing</p>
+			<!-- Input field to receive a string -->
+			<p><input type = "text" id = "string" /></p>
+			<!-- A button to listen to `click` event(using the VueJS way:`v-on`), and draw the chart. Some COOL classes for button of Materialize and the icon -->
+			<div id = "my_app">
+				<button v-on:click = "drawChart" class = "waves-effect waves-light btn"><i class="material-icons right">insert_chart</i>Draw</button>
+			</div>
+		</div>
+
+		<!-- Where the bar chart lives -->
+		<canvas id = "bar_char" width = "100" height = "50"></canvas>
+
+		<!-- include scripts to calculate the frequency and draw a bar chart -->
+		<script src = "scripts/freqOfChar_jQuery.js"></script>
+		<script src = "scripts/barChart_vue.js"></script>
+	</body>
+</html>
