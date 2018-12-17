@@ -1,0 +1,13 @@
+#heading1
+{
+	color:blue;
+	font-family:cursive;
+	text-align:center;
+}
+
+/* give instruction for using */
+#inst
+{
+	color:gray;
+	text-decoration:small-caps;
+}

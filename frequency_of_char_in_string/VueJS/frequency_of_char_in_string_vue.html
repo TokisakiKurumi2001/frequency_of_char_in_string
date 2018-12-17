@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Frequency of char in string VueJS</title>
+
+		<!-- loading materialize to make the input looks beautiful -->
+		<link type = "text/css" rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" media = "screen,projection">
+
+		<!-- Let the broswer know website is optimized for mobile -->
+		<meta name = "viewport" content = "width=device-width, initial-scale = 1.0"/>
+
+		<!-- VueJS library -->
+		<script src = "https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"></script>
+
+		<!-- my own defined style -->
+		<link rel = "stylesheet" href = "frequency_of_char_in_string_vue.css">
+	</head>
+	<body>
+		<div class = "container">
+			<h1 id = "heading1">Frequency of char in string</h1>
+			<p id = "inst">Whenever you have finished typing, press Enter and you have the result</p>
+			<div id = "app">
+				<!-- 
+				 What is inside this input will be on `p` which has `{{reflect}}` by `v-model`
+				 v-on:keydown: eventListener -> when the user presses type in the input field -> run the function :
+				 freqOfCharStr
+				-->
+				<input v-model = "reflect" v-on:keydown = "freqOfCharStr" type = "text" />
+				<p>{{ reflect }}</p>
+				<!-- loop through the `dictionary` array, for each element in the array, print to the web page some
+				`p` element -->
+				<paragraph v-for = "dict in dictionary" v-bind:record = "dict" v-bind:key = "dict.id"></paragraph>
+			</div>
+		</div>
+		<script src = "frequency_of_char_in_string_vue.js"></script>
+</html>
