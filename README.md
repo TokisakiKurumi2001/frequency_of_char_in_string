@@ -32,4 +32,4 @@ However, in the repository, I keep the string like "Hello C World"(frequency_of_
 | PHP   			     |  1.186s  |
 
 [//]: #
-[Demo]:<https://google.com>
+[Demo]:<https://tokisakikurumi2001.github.io/frequency_of_char_in_string/>
